@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        print("applicationDidEnterBackground")
+       // print("applicationDidEnterBackground")
     }
 
 

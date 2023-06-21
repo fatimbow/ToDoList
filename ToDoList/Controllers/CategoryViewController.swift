@@ -34,7 +34,6 @@ class CategoryViewController: UITableViewController {
         
         cell.textLabel?.text = categoryArray?[indexPath.row].name ?? "No Categories Added Yet."
         
-        
         return cell
 
     }
