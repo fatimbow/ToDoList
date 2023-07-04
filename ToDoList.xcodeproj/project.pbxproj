@@ -23,6 +23,7 @@
 		7FBD060A2A0D13A100508964 /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD06092A0D13A100508964 /* ToDoListTests.swift */; };
 		7FBD06142A0D13A100508964 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD06132A0D13A100508964 /* ToDoListUITests.swift */; };
 		7FBD06162A0D13A100508964 /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD06152A0D13A100508964 /* ToDoListUITestsLaunchTests.swift */; };
+		7FDC3F062A54666300D66766 /* Chameleon in Frameworks */ = {isa = PBXBuildFile; productRef = 7FDC3F052A54666300D66766 /* Chameleon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F63AC2F2A388DD300215F72 /* RealmSwift in Frameworks */,
+				7FDC3F062A54666300D66766 /* Chameleon in Frameworks */,
 				7F3587882A52F76C0006C9D8 /* SwipeCellKit in Frameworks */,
 				7F63AC2D2A388DD300215F72 /* Realm in Frameworks */,
 			);
@@ -133,6 +135,7 @@
 				7FBD06082A0D13A100508964 /* ToDoListTests */,
 				7FBD06122A0D13A100508964 /* ToDoListUITests */,
 				7FBD05F02A0D13A000508964 /* Products */,
+				7FDC3F042A54666300D66766 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +180,13 @@
 			path = ToDoListUITests;
 			sourceTree = "<group>";
 		};
+		7FDC3F042A54666300D66766 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +207,7 @@
 				7F63AC2C2A388DD300215F72 /* Realm */,
 				7F63AC2E2A388DD300215F72 /* RealmSwift */,
 				7F3587872A52F76C0006C9D8 /* SwipeCellKit */,
+				7FDC3F052A54666300D66766 /* Chameleon */,
 			);
 			productName = ToDoList;
 			productReference = 7FBD05EF2A0D13A000508964 /* ToDoList.app */;
@@ -273,6 +284,7 @@
 			packageReferences = (
 				7F63AC2B2A388DD300215F72 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				7F3587862A52F76C0006C9D8 /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
+				7F35878B2A5436040006C9D8 /* XCRemoteSwiftPackageReference "ChameleonFramework" */,
 			);
 			productRefGroup = 7FBD05F02A0D13A000508964 /* Products */;
 			projectDirPath = "";
@@ -675,6 +687,14 @@
 				minimumVersion = 2.7.1;
 			};
 		};
+		7F35878B2A5436040006C9D8 /* XCRemoteSwiftPackageReference "ChameleonFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/starkdmi/ChameleonFramework.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		7F63AC2B2A388DD300215F72 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -700,6 +720,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7F63AC2B2A388DD300215F72 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		7FDC3F052A54666300D66766 /* Chameleon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F35878B2A5436040006C9D8 /* XCRemoteSwiftPackageReference "ChameleonFramework" */;
+			productName = Chameleon;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

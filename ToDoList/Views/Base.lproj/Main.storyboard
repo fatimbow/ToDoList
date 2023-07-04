@@ -11,7 +11,7 @@
         <scene sceneID="u2p-wp-SeB">
             <objects>
                 <tableViewController id="Qfh-Ij-aoF" customClass="TodolistViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kl8-TS-A5r">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kl8-TS-A5r">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,10 +26,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="r3o-G2-kyZ" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
-                                <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3o-G2-kyZ" id="eMc-95-5xI">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -42,13 +42,15 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Items" id="AAq-pJ-tLB">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IJb-rA-7Jr">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="Qfh-Ij-aoF" id="2Sf-NI-Un9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="zGj-nE-tmo" id="Lkd-he-YmG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vga-Qa-kKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,8 +61,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wNC-J2-Kqf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="szv-FV-uav">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="szv-FV-uav">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemTealColor"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
@@ -78,9 +80,7 @@
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" systemColor="systemTealColor"/>
-                            <textAttributes key="titleTextAttributes">
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </textAttributes>
+                            <textAttributes key="titleTextAttributes"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -96,16 +96,16 @@
         <scene sceneID="jjn-1u-PT2">
             <objects>
                 <tableViewController id="Wxz-3W-EVF" customClass="CategoryViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IGx-gw-LQe">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IGx-gw-LQe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Y2Q-pX-030" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y2Q-pX-030" id="djb-NM-hRN">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

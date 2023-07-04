@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import Chameleon
 
 class TodolistViewController: SwipeTableViewController {
     
@@ -19,12 +20,34 @@ class TodolistViewController: SwipeTableViewController {
         }
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let colorHex = selectedCategory?.categoryColor {
+            
+            title = selectedCategory!.name
+            
+            guard let navBar = navigationController?.navigationBar else {
+                fatalError("Navigation controller does not exist.")
+            }
+            
+            if let navBarColor = UIColor(hexString: colorHex) {
+                
+                navBar.standardAppearance.backgroundColor = navBarColor
+                navBar.scrollEdgeAppearance = navBar.standardAppearance
+                
+                navBar.tintColor = UIColor(contrastingBlackOrWhiteColorOn:navBarColor, isFlat:true)
+                
+                navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(contrastingBlackOrWhiteColorOn:navBarColor, isFlat:true)]
+                
+                searchBar.barTintColor = navBarColor
+            }
+        }
     }
     
     
@@ -43,6 +66,11 @@ class TodolistViewController: SwipeTableViewController {
             
             cell.textLabel?.text = item.title
             
+            if let color = UIColor(hexString: selectedCategory!.categoryColor)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat( todoItems!.count)) {
+                
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn:color, isFlat:true)
+            }
             // value = condition ? valueIfTrue: valueIfFalse
             
             cell.accessoryType = item.done ? .checkmark : .none
