@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F3587882A52F76C0006C9D8 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7F3587872A52F76C0006C9D8 /* SwipeCellKit */; };
+		7F35878A2A5308160006C9D8 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3587892A5308160006C9D8 /* SwipeTableViewController.swift */; };
 		7F63AC2D2A388DD300215F72 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7F63AC2C2A388DD300215F72 /* Realm */; };
 		7F63AC2F2A388DD300215F72 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F63AC2E2A388DD300215F72 /* RealmSwift */; };
 		7F63AC332A38976300215F72 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F63AC322A38976300215F72 /* Item.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3587892A5308160006C9D8 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		7F63AC322A38976300215F72 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7F63AC342A38976E00215F72 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7FB1EDA02A37527100DE30F2 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				7FB1EDA02A37527100DE30F2 /* CategoryViewController.swift */,
 				7FBD05F62A0D13A000508964 /* TodolistViewController.swift */,
+				7F3587892A5308160006C9D8 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				7FB1EDA12A37527100DE30F2 /* CategoryViewController.swift in Sources */,
 				7FBD05F72A0D13A000508964 /* TodolistViewController.swift in Sources */,
 				7FBD05F32A0D13A000508964 /* AppDelegate.swift in Sources */,
+				7F35878A2A5308160006C9D8 /* SwipeTableViewController.swift in Sources */,
 				7F63AC332A38976300215F72 /* Item.swift in Sources */,
 				7FBD05F52A0D13A000508964 /* SceneDelegate.swift in Sources */,
 				7F63AC352A38976E00215F72 /* Category.swift in Sources */,
